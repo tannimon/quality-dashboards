@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Tanni's Quality Dashboards</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --purple:#6b4ab0; --purple3:#a98fdc; --purple-pale:#f3f0ff; --purple-deep:#3a2070;
+  --ink:#1e1b2e; --ink-soft:#5c5470;
+  --bg:#f7f5ff; --card-bg:#fff; --card-border:#e5e0f2;
+  --font:'DM Sans',system-ui,sans-serif; --mono:'DM Mono',monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--bg);color:var(--ink);font-family:var(--font);line-height:1.6;
+  min-height:100vh;display:flex;flex-direction:column;}
+
+header{background:var(--purple);padding:14px 20px;display:flex;align-items:center;gap:12px;}
+.hbadge{background:rgba(255,255,255,.2);color:#fff;font-family:var(--mono);font-size:10px;
+  font-weight:700;padding:3px 9px;border-radius:4px;letter-spacing:.1em;}
+.htitle{font-size:15px;font-weight:700;color:#fff;}
+
+.demo-banner{background:#fff8ec;border-bottom:1px solid #e8c060;color:#6b3d00;
+  font-size:12.5px;font-weight:500;padding:8px 20px;text-align:center;}
+.demo-banner strong{font-weight:700;}
+
+main{max-width:760px;margin:0 auto;padding:48px 24px 64px;flex:1;}
+h1{font-size:26px;font-weight:700;letter-spacing:-.4px;margin-bottom:10px;}
+.lede{font-size:15px;color:var(--ink-soft);margin-bottom:36px;}
+
+.cards{display:grid;gap:16px;}
+@media(min-width:680px){.cards{grid-template-columns:1fr 1fr;}}
+
+.card{display:block;background:var(--card-bg);border:1px solid var(--card-border);
+  border-top:3px solid var(--purple);border-radius:11px;padding:22px;text-decoration:none;
+  color:inherit;transition:border-color .15s,transform .15s,box-shadow .15s;}
+.card:hover{border-color:var(--purple3);border-top-color:var(--purple);
+  transform:translateY(-2px);box-shadow:0 6px 20px rgba(107,74,176,.12);}
+.card h2{font-size:16px;font-weight:700;margin-bottom:7px;color:var(--purple-deep);}
+.card p{font-size:13.5px;color:var(--ink-soft);margin-bottom:14px;}
+.meta{font-family:var(--mono);font-size:11px;color:var(--purple);letter-spacing:.03em;}
+.go{display:inline-block;margin-top:12px;font-size:13px;font-weight:600;color:var(--purple);}
+
+footer{text-align:center;padding:32px 20px 28px;border-top:1px dashed var(--card-border);}
+.sawyer{display:inline-block;width:150px;border-radius:12px;border:3px solid #fff;
+  box-shadow:0 4px 16px rgba(107,74,176,.18);transition:transform .2s;}
+.sawyer:hover{transform:rotate(-2deg) scale(1.04);}
+.sawyer-name{font-family:var(--font);font-size:13px;font-weight:700;color:var(--purple-deep);margin-top:12px;}
+.sawyer-role{font-family:var(--mono);font-size:10.5px;color:var(--purple);letter-spacing:.08em;
+  text-transform:uppercase;margin-top:2px;}
+.footer-note{font-family:var(--mono);font-size:11px;color:#bcb4d4;margin-top:18px;}
+</style>
+</head>
+<body>
+
+<header>
+  <span class="hbadge">DEMO</span>
+  <span class="htitle">Tanni's Quality Dashboards</span>
+</header>
+
+<div class="demo-banner">
+  <strong>Fictional / sample data.</strong> Everything shown in these dashboards is invented for demonstration purposes.
+</div>
+
+<main>
+  <h1>Two views of the same problem</h1>
+  <p class="lede">
+    Both dashboards look at core measure fallouts — where charts fail a quality measure, and why.
+    Pick a view to explore.
+  </p>
+
+  <div class="cards">
+    <a class="card" href="fallout-dashboard.html">
+      <h2>Fallout Dashboard</h2>
+      <p>
+        A system-wide view of quality performance across sites, measures, and the patient journey.
+        Explore where fallouts occur, what's driving them, and whether performance is improving over time.
+        Drill down by physician to separate provider-specific issues from nursing, process, and system opportunities.
+      </p>
+      <div class="meta">6 sites · 5 measure sets · 16 physicians · 1,400 charts</div>
+      <span class="go">Open dashboard →</span>
+    </a>
+
+    <a class="card" href="physician-accountability.html">
+      <h2>Physician Accountability Dashboard</h2>
+      <p>
+        A physician-focused view of SEP-1 performance over six months. Track compliance trends,
+        identify recurring fallout patterns, measure the impact of education, and quickly see
+        which providers or cases need leadership attention.
+      </p>
+      <div class="meta">SEP-1 · 25 physicians · 214 cases</div>
+      <span class="go">Open dashboard →</span>
+    </a>
+  </div>
+</main>
+
+<footer>
+  <img class="sawyer" src="sawyer.jpg"
+       alt="Sawyer, a small black and tan dog in a knit beanie, sitting at a cafe table behind a cup of coffee"
+       width="150" height="149" loading="lazy">
+  <div class="sawyer-name">Sawyer</div>
+  <div class="sawyer-role">Chief Morale Officer</div>
+  <p class="footer-note">No real patients, physicians, or lactate levels were harmed in the making of these dashboards.</p>
+</footer>
+
+</body>
+</html>
