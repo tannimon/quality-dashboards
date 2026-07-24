@@ -95,6 +95,6 @@ sawyer.jpg                     Chief Morale Officer
 
 ## Built by
 
-Tanni — clinical quality abstractor, vibe code hobbiest, and web design enthusiast. She loves her dog, Sawyer.
+Tanni — clinical quality abstractor, vibe code hobbyist, and web design enthusiast. She loves her dog, Sawyer.
 
 Quality-assured by Sawyer, who has reviewed these metrics and has no notes.
